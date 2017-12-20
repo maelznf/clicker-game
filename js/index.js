@@ -51,14 +51,14 @@ function bonusForLevel(bonusTo, level){
 function bonusBuyButtonClick(bonusName){
   var bonusSelected = bonus[bonusName];
   var currentNb = player.bonuses[bonusName]
-  if (bonusSelected.nbLimit >= 1){
   bonusSelected.nbLimit = bonusSelected.nbLimit - 1
-    if (!currentNb){
-    currentNb = 0
-    }
-    currentNb++;
+  if (!currentNb){
+  currentNb = 0
+  }
+  currentNb++;
 
-      if (player.dollars >= bonusForLevel(bonusSelected, currentNb - 1).price){
+  if (currentNb <= bonusSelected.nbLimit){
+    if (player.dollars >= bonusForLevel(bonusSelected, currentNb - 1).price){
       player.bonuses[bonusName] = currentNb;
       player.dollars = player.dollars - bonusForLevel(bonusSelected, currentNb - 1).price
       player.dollarsPerClick = player.dollarsPerClick + bonusForLevel(bonusSelected, currentNb - 1).numberSec
@@ -66,7 +66,7 @@ function bonusBuyButtonClick(bonusName){
       UI.setDollarsPerClick(player.dollarsPerClick);
       UI.setBonusOptions(bonusName, currentNb, bonusForLevel(bonusSelected, currentNb).price, bonusForLevel(bonusSelected, currentNb).numberSec);
       UI.setItemOptions(player.dollars)
-   }
+    }
   }
 }
 
