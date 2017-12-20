@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Clicker game</title>
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+  <link href="https://fonts.googleapis.com/css?family=Bangers&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="main" class="container">
+    <div class="row">
+
+      <div class="col-md-7" id="buildings">
+
+          <!-- ambassade -->
+          <div class="building default-block" id="ambassade">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="./img/3gm/object/ambassade.jpg" />
+                </div>
+                <div class="col-md-5">
+                    <h3>Ambassade</h3>
+                    <div class="quantity">Niveau <span>0</span></div>
+                </div>
+                <div class="col-md-4">
+                  <div class="text-right">
+                    <div class="dollars-per-sec">+<span>1200</span>$ /sec</div>
+                    <button type="button" class="btn btn-danger">acheter <span>1200</span> $</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <!-- camp -->
+          <div class="building default-block" id="camp">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="./img/3gm/object/camp_militaire.jpg" />
+              </div>
+              <div class="col-md-5">
+                  <h3>Camp d'entrainement</h3>
+                  <div class="quantity">Niveau <span>0</span></div>
+              </div>
+              <div class="col-md-4">
+                <div class="text-right">
+                  <div class="dollars-per-sec">+<span>1200</span>$ /sec</div>
+                  <button type="button" class="btn btn-danger">acheter <span>1200</span> $</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- naval -->
+          <div class="building default-block" id="naval">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="./img/3gm/object/chantier_naval.jpg" />
+              </div>
+              <div class="col-md-5">
+                  <h3>Chantier Naval</h3>
+                  <div class="quantity">Niveau <span>0</span></div>
+              </div>
+              <div class="col-md-4">
+                <div class="text-right">
+                  <div class="dollars-per-sec">+<span>1200</span>$ /sec</div>
+                  <button type="button" class="btn btn-danger">acheter <span>1200</span> $</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- industrie -->
+          <div class="building default-block" id="industrie">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="./img/3gm/object/industrie.jpg" />
+              </div>
+              <div class="col-md-5">
+                  <h3>Industrie chimique</h3>
+                  <div class="quantity">Niveau <span>0</span></div>
+              </div>
+              <div class="col-md-4">
+                <div class="text-right">
+                  <div class="dollars-per-sec">+<span>1200</span>$ /sec</div>
+                  <button type="button" class="btn btn-danger">acheter <span>1200</span> $</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- laboratoire -->
+          <div class="building default-block" id="laboratoire">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="./img/3gm/object/laboratoire.jpg" />
+              </div>
+              <div class="col-md-5">
+                  <h3>Laboratoire</h3>
+                  <div class="quantity">Niveau <span>0</span></div>
+              </div>
+              <div class="col-md-4">
+                <div class="text-right">
+                  <div class="dollars-per-sec">+<span>1200</span>$ /sec</div>
+                  <button type="button" class="btn btn-danger">acheter <span>1200</span> $</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- marche -->
+          <div class="building default-block" id="marche">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="./img/3gm/object/marche.jpg" />
+              </div>
+              <div class="col-md-5">
+                  <h3>Marché mondial</h3>
+                  <div class="quantity">Niveau <span>0</span></div>
+              </div>
+              <div class="col-md-4">
+                <div class="text-right">
+                  <div class="dollars-per-sec">+<span>1200</span>$ /sec</div>
+                  <button type="button" class="btn btn-danger">acheter <span>1200</span> $</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div> <!-- eof weapons -->
+
+      <div class="col-md-1"></div>
+
+
+      <div class="col-md-4">
+          <div id="header">
+            <div class="default-block">
+              <div class="row" id="medal">
+                <div class="col-md-4">
+                  <img id="player-medal" src="./img/military/medals/medal_01.png" />
+                </div>
+                <div class="col-md-8">
+                  <div id="money"><span>0</span> $</div>
+                  <div id="incoming"><span>1</span>$ /sec</div>
+                  <div id="dollars-click"><span>1</span>$ /click</div>
+                  <div id="level">niveau <span>1</span></div>
+                  <div id="total">Total : <span>0</span> $</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="clicker-zone">
+            <button id="main-button" type="button" class="btn btn-danger no-select">MAKE MONEY</button>
+          </div>
+
+          <div class="row" id="bonuses">
+
+              <!-- bottle -->
+              <div class="col-md-12 bonus default-block" id="bottle">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img src="./img/military/items/item_warter_bottle_02.png" />
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Gourde</h3>
+                        <div class="quantity">Quantité: <span>0</span></div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="text-right">
+                        <div class="dollars-per-sec">+<span>0.5</span>$ /click</div>
+                        <button type="button" class="btn btn-danger"><span>1200</span> $</button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <!-- bottle2 -->
+              <div class="col-md-12 bonus default-block" id="bottle2">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img src="./img/military/items/item_warter_bottle_01.png" />
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Gourde n°2</h3>
+                        <div class="quantity">Quantité: <span>0</span></div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="text-right">
+                        <div class="dollars-per-sec">+<span>0.5</span>$ /click</div>
+                        <button type="button" class="btn btn-danger"><span>1200</span> $</button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <!-- medkit -->
+              <div class="col-md-12 bonus default-block" id="medkit">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img src="./img/military/items/item_emergency_kit_02.png" />
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Medikit</h3>
+                        <div class="quantity">Quantité: <span>0</span></div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="text-right">
+                        <div class="dollars-per-sec">+<span>0.5</span>$ /click</div>
+                        <button type="button" class="btn btn-danger"><span>1200</span> $</button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <!-- medkit2 -->
+              <div class="col-md-12 bonus default-block" id="medkit2">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img src="./img/military/items/item_emergency_kit_01.png" />
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Medikit n°2</h3>
+                        <div class="quantity">Quantité: <span>0</span></div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="text-right">
+                        <div class="dollars-per-sec">+<span>0.5</span>$ /click</div>
+                        <button type="button" class="btn btn-danger"><span>1200</span> $</button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/helpers.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/index.js"></script>
+  <script type='text/javascript'>
+    UI.init();
+    // UI.onItemBuyButtonClicked(UI.itemBought);
+
+    // UI.setItemOptions("ambassade", 3, 99, 9)
+    // UI.setLevel(3);
+    // UI.setIncoming(30);
+    // UI.addMoney(300);
+    // UI.itemBought("ambassade");
+    // UI.setBonusOptions("medkit", 1, 99, 9);
+    UI.onMainButtonClicked(mainButtonClick);
+    UI.onItemBuyButtonClicked(itemBuyButtonClick);
+    UI.onBonusBuyButtonClicked(bonusBuyButtonClick);
+
+    start();
+  </script>
+</body>
+</html>
