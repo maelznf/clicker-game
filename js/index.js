@@ -51,7 +51,6 @@ function bonusForLevel(bonusTo, level){
 function bonusBuyButtonClick(bonusName){
   var bonusSelected = bonus[bonusName];
   var currentNb = player.bonuses[bonusName]
-  bonusSelected.nbLimit = bonusSelected.nbLimit - 1
   if (!currentNb){
   currentNb = 0
   }

@@ -51,7 +51,7 @@ var bonus = {
   },
   "medkit2": {
     "price": 200000,
-    "numberSec": 200,
+    "numberSec": 400,
     "nbLimit": 10
   }
  };
